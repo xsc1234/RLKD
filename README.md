@@ -1,4 +1,4 @@
-### Source Code for paper "Distilling the Implicit Multi-Branch Structure in LLMs’ Reasoning via Reinforcement Learning"
+### Source Code for paper "RLKD: Distilling LLMs’ Reasoning via Reinforcement Learning"
 
 #### Install
 ```
@@ -90,4 +90,5 @@ MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=32768,gpu_memory_u
 OUTPUT_DIR=./Your_Output_PATH/$MODEL
 export CUDA_VISIBLE_DEVICES=6
 nohup lighteval vllm $MODEL_ARGS "lighteval|math_500|0|0" --use-chat-template --output-dir $OUTPUT_DIR > math_500.log 2>&1 &
+
 ```
